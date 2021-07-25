@@ -19,9 +19,9 @@ This is largely inspired by [Richard O'Dwyer's randomavatar](https://github.com/
 
     @app.route("/photo.png")
     def photo():
-        avatar = Avatar.generate(128, "example@sysnove.fr", "PNG")
+        bytes_stream = Avatar.generate(128, "example@sysnove.fr", "ES", "PNG")
         headers = { 'Content-Type': 'image/png' }
-        return make_response(avatar, 200, headers)
+        return make_response(bytes_stream.getvalue(), 200, headers)
 
 ## Licence
 
