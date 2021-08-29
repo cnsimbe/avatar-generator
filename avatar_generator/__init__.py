@@ -19,7 +19,7 @@ from random import randint, seed
 from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont
 
-__all__ = ['Avatar']
+__all__ = ['Avatar', 'test']
 
 
 class Avatar(object):
@@ -105,7 +105,7 @@ class Avatar(object):
             Returns the left-top point where the text should be positioned.
         """
         width, height = font.getsize(text)
-        left = (size - width) / 2.25
+        left = (size - width) / 2.03
         # I just don't know why 5.5, but it seems to be the good ratio
         top = (size - height) / 2.25
         return left, top
