@@ -105,7 +105,7 @@ class Avatar(object):
             Returns the left-top point where the text should be positioned.
         """
         width, height = font.getsize(text)
-        left = (size - width) / 2.03
+        left = (size - width) / 2.075
         # I just don't know why 5.5, but it seems to be the good ratio
         top = (size - height) / 2.25
         return left, top
